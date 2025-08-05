@@ -607,7 +607,7 @@
         /* SMALL MOBILE */
         @media (max-width: 480px) {
             .hero {
-                padding: 180px 0 60px;
+                padding: 200px 0 40px;
             }
 
             .hero-content {
