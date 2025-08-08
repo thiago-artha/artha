@@ -175,8 +175,12 @@
                     </ul>
                 </div>
                 
-                <form class="quote-form" id="quoteForm">
+                <!-- FORMULÁRIO CORRIGIDO - SEM REDIRECIONAMENTO -->
+                <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xzzvkgon" method="POST">
                     <h3>Solicite Sua Cotação</h3>
+                    
+                    <!-- Mensagem de Status -->
+                    <div id="formStatus" class="form-status" style="display: none;"></div>
                     
                     <div class="form-group">
                         <label for="name">Nome Completo *</label>
@@ -208,9 +212,12 @@
                         <textarea id="message" name="message" rows="4" placeholder="Descreva sua necessidade (volume, frequência, prazo, etc.)"></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">
+                    <!-- Campo oculto para identificar origem - SEM REDIRECIONAMENTO -->
+                    <input type="hidden" name="_subject" value="Nova Solicitação de Cotação - Artha Shipping">
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
                         <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-                        Enviar Solicitação
+                        <span id="btnText">Enviar Solicitação</span>
                     </button>
                 </form>
             </div>
